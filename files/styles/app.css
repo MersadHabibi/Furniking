@@ -1,0 +1,56 @@
+@import "reset.css";
+@import "grid.css";
+@import "fonts.css";
+
+:root{
+    --back-color: #FFFFFF;
+    --first-color: #7AC751;
+    --second-color: #E2E2EA;
+    --blue: #00B7F1;
+    --red: #FF6868;
+    --smoke-color: #F7F8FA;
+    --text-first-color: #555555;
+    --text-second-color: #C2C2C2;
+    --first-font: "Rubik";
+    --second-font: "Mulish";
+}
+html {
+    font-size: 62.5%; /* 10px */
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body {
+    line-height: 1.6;
+    font-size: 1.6rem;
+    overflow-x: hidden;
+}
+
+/*
+
+-- Reset Style --
+
+*/
+
+a {
+    text-decoration: none;
+}
+
+
+
+/*
+
+-- Component --
+
+*/
+
+/*
+
+-- Helper Class --
+
+*/
+
+/*
+
+-- App Style --
+
+*/
