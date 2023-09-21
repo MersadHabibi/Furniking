@@ -9,7 +9,155 @@
     <link rel="stylesheet" href="files/styles/responsive.css">
 </head>
 <body>
-    <p>hello <ion-icon name="heart"></ion-icon></p>
+    <header class="header">
+        <section class="top-bar">
+            <div class="container">
+                <div class="top-bar__wrapper">
+                    <h3 class="top-bar__title">Welcome to our online shop</h3>
+                    <div class="top-bar__btns">
+                        <a href="#" class="top-bar__select-language">English (USD) <ion-icon name="chevron-down-outline"></ion-icon></a>
+                        <div class="top-bar__line"></div>
+                        <a href="#" class="top-bar__login">Login or Sign up</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="header-top">
+            <div class="container">
+                <div class="header-top__wrapper">
+                    <div class="header__logo-box">
+                        <svg class="header__logo" width="32" height="39" viewBox="0 0 32 39" fill="none">
+                            <path d="M5.96954 6.94641C6.61481 6.94641 7.14111 6.42011 7.14111 5.77484C7.14111 5.12958 6.61481 4.60327 5.96954 4.60327C5.32428 4.60327 4.79797 5.12958 4.79797 5.77484C4.79797 6.42371 5.32428 6.94641 5.96954 6.94641Z" fill="#85B839"/>
+                            <path d="M9.59605 24.7833V27.0327C11.4201 25.7098 13.5974 24.9852 15.8937 24.9852C18.1864 24.9852 20.3673 25.7098 22.1913 27.0327V24.7833C22.1913 22.8944 23.1394 21.2253 24.5777 20.2196C24.4552 17.8476 22.4941 15.9551 20.0933 15.9551H11.6941C9.29325 15.9551 7.33222 17.8476 7.20966 20.2196C8.64798 21.2253 9.59605 22.8944 9.59605 24.7833Z" fill="#85B839"/>
+                            <path d="M22.8222 12.5305H8.91473V14.4267H22.8222V12.5305Z" fill="#85B839"/>
+                            <path d="M22.1913 29.0262C20.4754 27.4185 18.2548 26.5281 15.8937 26.5281C13.5325 26.5281 11.3119 27.4185 9.59601 29.0262V31.081H22.1913V29.0262Z" fill="#85B839"/>
+                            <path d="M25.551 6.94641C26.1963 6.94641 26.7226 6.42011 26.7226 5.77484C26.7226 5.12958 26.1963 4.60327 25.551 4.60327C24.9058 4.60327 24.3795 5.12958 24.3795 5.77484C24.3795 6.42371 24.9058 6.94641 25.551 6.94641Z" fill="#85B839"/>
+                            <path d="M15.9117 3.77786C16.9535 3.77786 17.8006 2.93073 17.8006 1.88893C17.8006 0.847135 16.9535 0 15.9117 0C14.8699 0 14.0228 0.847135 14.0228 1.88893C14.0228 2.93073 14.8699 3.77786 15.9117 3.77786Z" fill="#85B839"/>
+                            <path d="M27.7608 20.7566C25.5402 20.7566 23.7342 22.5626 23.7342 24.7832V32.6201H8.05319V24.7832C8.05319 22.5626 6.24717 20.7566 4.0266 20.7566C1.80602 20.7566 0 22.5626 0 24.7832C0 27.0038 1.80602 28.8098 4.0266 28.8098H4.79803V35.8789H26.9894V28.8098H27.7608C29.9814 28.8098 31.7874 27.0038 31.7874 24.7832C31.7874 22.5626 29.9814 20.7566 27.7608 20.7566ZM4.0266 26.0341C3.33447 26.0341 2.77572 25.4753 2.77572 24.7832C2.77572 24.0911 3.33807 23.5323 4.0266 23.5323C4.71872 23.5323 5.27747 24.0911 5.27747 24.7832C5.27747 25.4753 4.71872 26.0341 4.0266 26.0341ZM27.7608 26.0341C27.0687 26.0341 26.5099 25.4753 26.5099 24.7832C26.5099 24.0911 27.0687 23.5323 27.7608 23.5323C28.4529 23.5323 29.0117 24.0911 29.0117 24.7832C29.0117 25.4753 28.4529 26.0341 27.7608 26.0341Z" fill="#85B839"/>
+                            <path d="M8.69839 10.9875H23.0348C23.8171 10.1404 24.383 9.14546 24.6966 8.0604C23.7702 8.54706 22.732 8.81742 21.665 8.81742C19.138 8.81742 16.9499 7.37549 15.8648 5.27026C14.7797 7.37188 12.588 8.81742 10.0646 8.81742C8.99398 8.81742 7.9594 8.55787 7.03656 8.07482C7.35739 9.15267 7.91974 10.144 8.69839 10.9875Z" fill="#85B839"/>
+                            <path d="M9.59609 37.4219H8.05322V38.9647H9.59609V37.4219Z" fill="#85B839"/>
+                            <path d="M23.7342 37.4219H22.1913V38.9647H23.7342V37.4219Z" fill="#85B839"/>
+                        </svg>
+                        <a href="#" class="header__logo-text">Furniking</a>
+                    </div>
+                    <div class="search-bar">
+                        <input class="search-bar__input" type="text" placeholder="Search here">
+                        <select class="search-bar__categories">
+                            <option value="categories">Categories</option>
+                            <option value="categories">Mirrors</option>
+                            <option value="categories">Tabble</option>
+                        </select>
+                        <div class="search-bar__btn"> <ion-icon name="search-outline"></ion-icon> </div>
+                    </div>
+                    <div class="header-top__btns">
+                        <a href="#" class="header-top__btn"><ion-icon name="cart-outline"></ion-icon></a>
+                        <a href="#" class="header-top__btn"><ion-icon name="notifications-outline"></ion-icon></a>
+                        <a href="#" class="header-top__btn"><ion-icon name="person-outline"></ion-icon></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <nav class="nav-bar">
+            <div class="container">
+                <div class="nav-bar__wrapper">
+                    <div class="nav-bar__all-collections">
+                        <div class="all-collections__icon">
+                            <span class="line"></span>
+                        </div>
+                        <span>ALL COLLECTIONS</span>
+                    </div>
+                    <ul class="menu">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">HOME</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">SHOP</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">BLOG</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">ABOUT</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">CONTACT US</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="header-content">
+            <div class="container">
+                <div class="header-content__wrapper">
+                    <ul class="header-content__collections">
+                        <li class="collections__item">
+                            <a href="#" class="collections__link">All</a>
+                        </li>
+                        <li class="collections__item">
+                            <a href="#" class="collections__link">New Arrivals</a>
+                        </li>
+                        <li class="collections__item">
+                            <a href="#" class="collections__link">Hot Sale</a>
+                        </li>
+                        <li class="collections__item">
+                            <a href="#" class="collections__link">Furniture</a>
+                        </li>
+                        <li class="collections__item">
+                            <a href="#" class="collections__link">Amrature</a>
+                        </li>
+                        <li class="collections__item">
+                            <a href="#" class="collections__link">Tabble</a>
+                        </li>
+                        <li class="collections__item">
+                            <a href="#" class="collections__link">Chair</a>
+                        </li>
+                        <li class="collections__item">
+                            <a href="#" class="collections__link">Sofa</a>
+                        </li>
+                        <li class="collections__item">
+                            <a href="#" class="collections__link">Mirrors</a>
+                        </li>
+                        <li class="collections__item">
+                            <a href="#" class="collections__link">Stools</a>
+                        </li>
+                        <li class="collections__item">
+                            <a href="#" class="collections__link">Benches</a>
+                        </li>
+                    </ul>
+                    <div class="header-content__banner">
+                        <div class="banner__wrapper">
+                            <div class="banner__contents">
+                                <h3 class="banner__top-text">TOP COLLECTIONS 2022</h3>
+                                <h1 class="banner__title">We Serve Your <br> Dream <span>Furniture</span></h1>
+                                <h2 class="banner__caption">Get 50% off all products</h2>
+                                <a href="#" class="banner__btn">SHOP NOW</a>
+                            </div>
+                            <div class="banner__image">
+                                <img src="files/images/banner-image.png" alt="">
+                            </div>
+                            <div class="banner__suggestions">
+                                <a href="#" class="banner__suggestions-product">
+                                    <img src="files/images/banner-image-1.png" alt="" class="suggestions-product__image">
+                                    <span class="suggestions-product__price">$120</span>
+                                    <span class="suggestions-product__name">Office Desk Chair</span>
+                                </a>
+                                <a href="#" class="banner__suggestions-product">
+                                    <img src="files/images/banner-image-2.png" alt="" class="suggestions-product__image">
+                                    <span class="suggestions-product__price">$180</span>
+                                    <span class="suggestions-product__name">Home Alisa Sofa</span>
+                                </a>
+                                <a href="#" class="banner__suggestions-product">
+                                    <img src="files/images/banner-image-3.png" alt="" class="suggestions-product__image">
+                                    <span class="suggestions-product__price">$250</span>
+                                    <span class="suggestions-product__name">Modern Chair</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
 
 

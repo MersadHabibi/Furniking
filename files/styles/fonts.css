@@ -3,7 +3,18 @@
     src: url(../fonts/Rubik-Regular.ttf) format(truetype);
 }
 @font-face {
+    font-family: 'Rubik Medium';
+    src: url(../fonts/Rubik-Medium.ttf) format(truetype);
+}
+@font-face {
     font-family: 'Mulish';
     src: url(../fonts/Mulish-Regular.ttf) format(truetype);
 }
-
+@font-face {
+    font-family: 'Mulish SemiBold';
+    src: url(../fonts/Mulish-SemiBold.ttf) format(truetype);
+}
+@font-face {
+    font-family: 'Mulish Bold';
+    src: url(../fonts/Mulish-Bold.ttf) format(truetype);
+}
