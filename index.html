@@ -15,7 +15,10 @@
                 <div class="top-bar__wrapper">
                     <h3 class="top-bar__title">Welcome to our online shop</h3>
                     <div class="top-bar__btns">
-                        <a href="#" class="top-bar__select-language">English (USD) <ion-icon name="chevron-down-outline"></ion-icon></a>
+                        <select class="top-bar__select-language">
+                            <option value="EN">English (USD)</option>
+                            <option value="EN">Persian (IR)</option>
+                        </select>
                         <div class="top-bar__line"></div>
                         <a href="#" class="top-bar__login">Login or Sign up</a>
                     </div>
@@ -25,7 +28,7 @@
         <section class="header-top">
             <div class="container">
                 <div class="header-top__wrapper">
-                    <div class="header__logo-box">
+                    <a href="#" class="header__logo-box">
                         <svg class="header__logo" width="32" height="39" viewBox="0 0 32 39" fill="none">
                             <path d="M5.96954 6.94641C6.61481 6.94641 7.14111 6.42011 7.14111 5.77484C7.14111 5.12958 6.61481 4.60327 5.96954 4.60327C5.32428 4.60327 4.79797 5.12958 4.79797 5.77484C4.79797 6.42371 5.32428 6.94641 5.96954 6.94641Z" fill="#85B839"/>
                             <path d="M9.59605 24.7833V27.0327C11.4201 25.7098 13.5974 24.9852 15.8937 24.9852C18.1864 24.9852 20.3673 25.7098 22.1913 27.0327V24.7833C22.1913 22.8944 23.1394 21.2253 24.5777 20.2196C24.4552 17.8476 22.4941 15.9551 20.0933 15.9551H11.6941C9.29325 15.9551 7.33222 17.8476 7.20966 20.2196C8.64798 21.2253 9.59605 22.8944 9.59605 24.7833Z" fill="#85B839"/>
@@ -38,8 +41,8 @@
                             <path d="M9.59609 37.4219H8.05322V38.9647H9.59609V37.4219Z" fill="#85B839"/>
                             <path d="M23.7342 37.4219H22.1913V38.9647H23.7342V37.4219Z" fill="#85B839"/>
                         </svg>
-                        <a href="#" class="header__logo-text">Furniking</a>
-                    </div>
+                        <span class="header__logo-text">Furniking</span>
+                    </a>
                     <div class="search-bar">
                         <input class="search-bar__input" type="text" placeholder="Search here">
                         <select class="search-bar__categories">
@@ -65,6 +68,7 @@
                             <span class="line"></span>
                         </div>
                         <span>ALL COLLECTIONS</span>
+                        <div class="all-collections__popup-list"></div>
                     </div>
                     <ul class="menu">
                         <li class="menu__item">
@@ -83,10 +87,48 @@
                             <a href="#" class="menu__link">CONTACT US</a>
                         </li>
                     </ul>
+                    <div class="mobile-menu">
+                        <h2 class="mobile-menu__title">All Collections</h2>
+                        <ul class="mobile-menu__list">
+                            <li class="mobile-menu__item">
+                                <a href="#" class="mobile-menu__link">All</a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="#" class="mobile-menu__link">New Arrivals</a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="#" class="mobile-menu__link">Hot Sale</a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="#" class="mobile-menu__link">Furniture</a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="#" class="mobile-menu__link">Amrature</a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="#" class="mobile-menu__link">Tabble</a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="#" class="mobile-menu__link">Chair</a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="#" class="mobile-menu__link">Sofa</a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="#" class="mobile-menu__link">Mirrors</a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="#" class="mobile-menu__link">Stools</a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="#" class="mobile-menu__link">Benches</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
-        <div class="header-content">
+        <section class="header-content">
             <div class="container">
                 <div class="header-content__wrapper">
                     <ul class="header-content__collections">
@@ -128,7 +170,7 @@
                         <div class="banner__wrapper">
                             <div class="banner__contents">
                                 <h3 class="banner__top-text">TOP COLLECTIONS 2022</h3>
-                                <h1 class="banner__title">We Serve Your <br> Dream <span>Furniture</span></h1>
+                                <h1 class="banner__title">We Serve Your Dream <span>Furniture</span></h1>
                                 <h2 class="banner__caption">Get 50% off all products</h2>
                                 <a href="#" class="banner__btn">SHOP NOW</a>
                             </div>
@@ -156,12 +198,179 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <section class="features-sec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-lg-3">
+                        <div class="feature">
+                            <img src="files/images/icons/free-delivery.svg" class="feature__icon">
+                            <div class="feature__content">
+                                <h4 class="feature__title">Free Shipping</h4>
+                                <p class="feature__caption">Orders over $100</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="feature">
+                            <img src="files/images/icons/gift.svg" class="feature__icon">
+                            <div class="feature__content">
+                                <h4 class="feature__title">Smart Gift Card</h4>
+                                <p class="feature__caption">Buy $1000 to get card</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="feature">
+                            <img src="files/images/icons/pay.svg" class="feature__icon">
+                            <div class="feature__content">
+                                <h4 class="feature__title">Quick Payment</h4>
+                                <p class="feature__caption">100% secure payment</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="feature">
+                            <img src="files/images/icons/support.svg" class="feature__icon">
+                            <div class="feature__content">
+                                <h4 class="feature__title">24/7 Support</h4>
+                                <p class="feature__caption">Quick support</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </header>
 
 
 
-
+    <div class="mobile-search-bar">
+        <div class="container">
+            <div class="search-bar">
+                <input class="search-bar__input" type="text" placeholder="Search here">
+                <select class="search-bar__categories">
+                    <option value="categories">Categories</option>
+                    <option value="categories">Mirrors</option>
+                    <option value="categories">Tabble</option>
+                </select>
+                <div class="search-bar__btn"> <ion-icon name="search-outline"></ion-icon> </div>
+            </div>
+            <div class="results__wrapper">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="result">
+                            <div class="result__image-box">
+                                <img class="result__image" src="files/images/banner-image-1.png" alt="">
+                            </div>
+                            <div class="result__content">
+                                <span class="result__category">CHAIR</span>
+                                <h4 class="result__name">Office Desk Chair</h4>
+                                <span class="result__price">$120</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="result">
+                            <div class="result__image-box">
+                                <img class="result__image" src="files/images/banner-image-2.png" alt="">
+                            </div>
+                            <div class="result__content">
+                                <span class="result__category">CHAIR</span>
+                                <h4 class="result__name">Minimal LCD chair</h4>
+                                <span class="result__price">$180</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="result">
+                            <div class="result__image-box">
+                                <img class="result__image" src="files/images/banner-image-3.png" alt="">
+                            </div>
+                            <div class="result__content">
+                                <span class="result__category">SOFA</span>
+                                <h4 class="result__name">Modern Sofa</h4>
+                                <span class="result__price">$120</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="result">
+                            <div class="result__image-box">
+                                <img class="result__image" src="files/images/banner-image.png" alt="">
+                            </div>
+                            <div class="result__content">
+                                <span class="result__category">TABBLE</span>
+                                <h4 class="result__name">Wood Coffee Tables</h4>
+                                <span class="result__price">$100</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="result">
+                            <div class="result__image-box">
+                                <img class="result__image" src="files/images/banner-image.png" alt="">
+                            </div>
+                            <div class="result__content">
+                                <span class="result__category">TABBLE</span>
+                                <h4 class="result__name">Wood Coffee Tables</h4>
+                                <span class="result__price">$100</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="result">
+                            <div class="result__image-box">
+                                <img class="result__image" src="files/images/banner-image.png" alt="">
+                            </div>
+                            <div class="result__content">
+                                <span class="result__category">TABBLE</span>
+                                <h4 class="result__name">Wood Coffee Tables</h4>
+                                <span class="result__price">$100</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="result">
+                            <div class="result__image-box">
+                                <img class="result__image" src="files/images/banner-image.png" alt="">
+                            </div>
+                            <div class="result__content">
+                                <span class="result__category">TABBLE</span>
+                                <h4 class="result__name">Wood Coffee Tables</h4>
+                                <span class="result__price">$100</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="result">
+                            <div class="result__image-box">
+                                <img class="result__image" src="files/images/banner-image.png" alt="">
+                            </div>
+                            <div class="result__content">
+                                <span class="result__category">TABBLE</span>
+                                <h4 class="result__name">Wood Coffee Tables</h4>
+                                <span class="result__price">$100</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="result">
+                            <div class="result__image-box">
+                                <img class="result__image" src="files/images/banner-image.png" alt="">
+                            </div>
+                            <div class="result__content">
+                                <span class="result__category">TABBLE</span>
+                                <h4 class="result__name">Wood Coffee Tables</h4>
+                                <span class="result__price">$100</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cover"></div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="files/scripts/app.js"></script>
