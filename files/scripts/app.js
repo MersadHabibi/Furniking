@@ -7,12 +7,13 @@ let mobileMenu = $.querySelector(".mobile-menu");
 let searchBtn = $.querySelector(".search-bar__btn");
 let mobileSearchBar = $.querySelector(".mobile-search-bar");
 let mobileMenuCover = $.querySelector(".cover");
+let searchBarInput = $.querySelector(".search-bar__input");
 let menuActive = false;
 let searchBarActive = false;
 let windowSize = window.innerWidth;
 
 // create popup
-if (windowSize <= 1200) {
+if (windowSize <= 1400) {
   let popupUl = $.createElement("ul");
   popupUl.classList.add("header-content__collections");
   popupUl.style.display = "block";
@@ -27,7 +28,6 @@ if (windowSize <= 1200) {
 // lock scroll when mobile menu is open
 window.addEventListener("scroll", (e) => {
   if ((menuActive == false && searchBarActive == false) || windowSize >= 992) {
-    console.log("object");
     return;
   } else if (menuActive == true || searchBarActive == true) {
     scroll(0, 0);
@@ -44,10 +44,19 @@ allCollectionMenuBtn.addEventListener("click", () => {
   allCollectionPopupMenu.classList.toggle("all-collections__popup-list--open");
   openMenu();
 });
-// open mobile search
+// open search Bar
 searchBtn.addEventListener("click", openSearchBar);
-//close mobile search
-mobileSearchBar.addEventListener("click", closeSearchBar);
+searchBarInput.addEventListener("focus" , ()=>{
+  console.log(searchBarActive);
+  if(searchBarActive == true){
+    return
+  }
+  else{
+    openSearchBar();
+  }
+})
+//close search Bar
+mobileSearchBar.addEventListener("click", closeSearchBar , false);
 
 //
 // Functions
@@ -70,15 +79,31 @@ function closeMenu() {
 }
 // open mobile search bar
 function openSearchBar() {
-  if (windowSize <= 769) {
-    mobileSearchBar.classList.add("mobile-search-bar--open");
-    HtmlElem.style.scrollBehavior = "unset";
-    searchBarActive = true;
-  }
+  let searchBarInput = $.querySelector(".mobile-search-bar .search-bar__input");
+  searchBarInput.focus();
+  mobileSearchBar.classList.add("mobile-search-bar--open");
+  HtmlElem.style.scrollBehavior = "unset";
+  searchBarActive = true;
 }
 // close mobile search bar
 function closeSearchBar() {
+  console.log('close search bar with mobileSearchBar');
   mobileSearchBar.classList.remove("mobile-search-bar--open");
   HtmlElem.style.scrollBehavior = "smooth";
   searchBarActive = false;
 }
+
+//
+// slider
+//
+
+var swiper = new Swiper(".mySwiper", {
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+});
