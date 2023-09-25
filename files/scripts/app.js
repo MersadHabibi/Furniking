@@ -35,7 +35,7 @@ if (windowSize <= 1400) {
   popupUl.innerHTML = allCollectionMenu.innerHTML;
   allCollectionPopupMenu.append(popupUl);
 }
-// add categories in popup search bar
+//add categories in popup search bar
 function addCategories() {
   popupSearchBarCategory.innerHTML = searchCategory.innerHTML;
   popupSearchBarCategory.value = searchCategory.value;
