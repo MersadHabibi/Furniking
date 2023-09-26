@@ -25,7 +25,7 @@ let searchCategory = $.querySelector(".search-bar__categories");
 //trending elements
 let trendingMenuLink = $.querySelectorAll(".trending-sec__menu-item");
 let trendingContent = $.querySelectorAll(".trending-sec__content");
-
+let trendingProduct = $.querySelectorAll(".trending-sec__product");
 //
 let mobileMenuCover = $.querySelector(".cover");
 let menuActive = false;
@@ -84,6 +84,10 @@ popupSearchBarCloseBtn.addEventListener("click", closeSearchBar);
 trendingMenuLink.forEach((e) => {
   e.addEventListener("click", changeTrendingContent);
 });
+// click on trending product
+trendingProduct.forEach((e) => {
+  e.addEventListener("click", activeTrendingProduct);
+});
 
 //
 
@@ -131,6 +135,14 @@ function changeTrendingContent() {
       _addRemoveClass("add", e, "trending-sec__content--active");
     }
   });
+}
+// active trending product on click
+function activeTrendingProduct() {
+  let activeElement = $.querySelector(".trending-sec__product--active");
+  if (activeElement)
+    _addRemoveClass("remove", activeElement, "trending-sec__product--active");
+  _addRemoveClass("add", this, "trending-sec__product--active");
+  console.log("click");
 }
 
 //
@@ -187,14 +199,49 @@ var swiper = new Swiper(".popup-search-bar .mySwiper", {
 });
 // trending section slider
 var swiper = new Swiper(".trending-sec__content .mySwiper", {
-  slidesPerView: 4,
+  pagination: {
+    el: ".trending-sec .swiper-pagination",
+    clickable: true,
+  },
   grid: {
     fill: "row",
     rows: 2,
   },
-  spaceBetween: 10,
-  pagination: {
-    el: ".trending-sec .swiper-pagination",
-    clickable: true,
+  breakpoints: {
+    1400: {
+      slidesPerView: 4,
+      spaceBetween: 50,
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 35,
+    },
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 25,
+    },
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 25,
+    },
+    450: {
+      slidesPerView: 2,
+      spaceBetween: 25,
+      grid: {
+        fill: "row",
+        rows: 1,
+      },
+    },
+    0: {
+      slidesPerView: 1,
+      grid: {
+        fill: "row",
+        rows: 1,
+      },
+    },
   },
 });
