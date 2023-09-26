@@ -22,6 +22,11 @@ let searchBtn = $.querySelector(".search-bar__btn");
 let searchInput = $.querySelector(".search-bar__input");
 let searchCategory = $.querySelector(".search-bar__categories");
 //
+//trending elements
+let trendingMenuLink = $.querySelectorAll(".trending-sec__menu-item");
+let trendingContent = $.querySelectorAll(".trending-sec__content");
+
+//
 let mobileMenuCover = $.querySelector(".cover");
 let menuActive = false;
 let searchBarActive = false;
@@ -75,6 +80,10 @@ searchBtn.addEventListener("click", openSearchBar);
 searchInput.addEventListener("click", openSearchBar);
 // open popup search bar
 popupSearchBarCloseBtn.addEventListener("click", closeSearchBar);
+// change content trending section
+trendingMenuLink.forEach((e) => {
+  e.addEventListener("click", changeTrendingContent);
+});
 
 //
 
@@ -109,6 +118,46 @@ function openSearchBar() {
 function closeSearchBar() {
   _addRemoveClass("remove", popupSearchBar, "popup-search-bar--open");
 }
+// change trending content
+function changeTrendingContent() {
+  let activeBtn = $.querySelector(".trending-sec__menu--active");
+  _addRemoveClass("remove", activeBtn, "trending-sec__menu--active");
+  _addRemoveClass("add", this, "trending-sec__menu--active");
+  let datasetValue = this.dataset.content;
+  trendingContent.forEach((e) => {
+    if (e.id != datasetValue) {
+      _addRemoveClass("remove", e, "trending-sec__content--active");
+    } else {
+      _addRemoveClass("add", e, "trending-sec__content--active");
+    }
+  });
+}
+
+//
+
+// Helper functions
+
+//
+
+// add class function
+function _addRemoveClass(action, element, classes) {
+  if (action == "add") {
+    element.classList.add(`${classes}`);
+  } else if (action == "remove") {
+    element.classList.remove(`${classes}`);
+  } else if (action == "toggle") {
+    element.classList.toggle(`${classes}`);
+  } else {
+    console.log(
+      "action not true",
+      ` element:${element} classes:${classes} action:${action}`
+    );
+  }
+}
+function _changeDisplay(element, styleValue) {
+  element.style.display = styleValue;
+}
+
 //
 
 // slider
@@ -136,28 +185,16 @@ var swiper = new Swiper(".popup-search-bar .mySwiper", {
   },
   mousewheel: true,
 });
-
-//
-
-// Helper functions
-
-//
-
-// add class function
-function _addRemoveClass(action, element, classes) {
-  if (action == "add") {
-    element.classList.add(`${classes}`);
-  } else if (action == "remove") {
-    element.classList.remove(`${classes}`);
-  } else if (action == "toggle") {
-    element.classList.toggle(`${classes}`);
-  } else {
-    console.log(
-      "action not true",
-      ` element:${element} classes:${classes} action:${action}`
-    );
-  }
-}
-function _changeDisplay(element, styleValue) {
-  element.style.display = styleValue;
-}
+// trending section slider
+var swiper = new Swiper(".trending-sec__content .mySwiper", {
+  slidesPerView: 4,
+  grid: {
+    fill: "row",
+    rows: 2,
+  },
+  spaceBetween: 10,
+  pagination: {
+    el: ".trending-sec .swiper-pagination",
+    clickable: true,
+  },
+});
