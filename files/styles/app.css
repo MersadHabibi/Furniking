@@ -714,6 +714,8 @@ a {
 .product-menu__add-to-cart:hover,
 .product-menu__view:hover {
   opacity: 0.75;
+  background-color: var(--first-color);
+  color: var(--white);
 }
 .trending-sec__product-tag {
   position: absolute;
