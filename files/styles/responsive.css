@@ -42,6 +42,11 @@
   .offer-sec {
     height: 43rem;
   }
+  .special-offer .col-lg-6:last-child .special-offer__offer,
+  .special-offer .col-lg-6:first-child .special-offer__offer {
+    filter: brightness(1.02);
+    background-position: right bottom;
+  }
 }
 @media screen and (max-width: 1100px) {
 }
@@ -99,6 +104,11 @@
   .trending-sec__image-container {
     height: 23rem;
   }
+  .special-offer .col-lg-6:last-child .special-offer__offer,
+  .special-offer .col-lg-6:first-child .special-offer__offer {
+    filter: brightness(1.01);
+    background-position: right bottom;
+  }
 }
 @media screen and (max-width: 768px) {
   .search-bar {
@@ -139,8 +149,16 @@
   .trending-sec__image-container {
     height: 25rem;
   }
+  .special-offer .col-lg-6:last-child .special-offer__offer,
+  .special-offer .col-lg-6:first-child .special-offer__offer {
+    filter: brightness(1.03);
+    background-position: right bottom;
+  }
 }
 @media screen and (max-width: 576px) {
+  .section-titles {
+    font-size: 3rem;
+  }
   .top-bar__line,
   .top-bar__login {
     display: none;
@@ -155,9 +173,6 @@
     padding: 2rem 1rem;
     height: 35vw;
     filter: brightness(1.1);
-  }
-  .trending-sec__title {
-    font-size: 3rem;
   }
   .trending-sec__menu {
     font-size: 2rem;
@@ -195,6 +210,26 @@
   }
   .trending-sec__image-container {
     height: 20rem;
+  }
+  .special-offer__offer {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    height: 46rem;
+    text-align: center;
+  }
+  .special-offer .col-lg-6:last-child .special-offer__offer,
+  .special-offer .col-lg-6:first-child .special-offer__offer {
+    background-position: top;
+    background-size: 25rem;
+  }
+  .special-offer .col-lg-6:first-child .special-offer__offer {
+    background-image: url(../images/special-offer-small-1.jpg);
+  }
+  .special-offer .col-lg-6:last-child .special-offer__offer {
+    background-image: url(../images/special-offer-small-2.jpg);
+    background-position-y: 3rem;
   }
 }
 @media screen and (max-width: 470px) {
@@ -240,5 +275,8 @@
 @media screen and (max-width: 350px) {
   .trending-sec__image-container {
     height: 27rem;
+  }
+  .special-offer__offer-name {
+    font-size: 2rem;
   }
 }

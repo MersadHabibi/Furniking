@@ -202,6 +202,12 @@ a {
 
 */
 
+.section-titles {
+  font-family: var(--mulish-bold);
+  text-align: center;
+  font-size: 3.6rem;
+}
+
 /*
 
 -- App Style --
@@ -625,12 +631,8 @@ a {
 /* trending section */
 .trending-sec {
   margin-top: 10rem;
-  padding-bottom: 5rem;
 }
 .trending-sec__title {
-  font-family: var(--mulish-bold);
-  text-align: center;
-  font-size: 3.6rem;
 }
 .trending-sec__menu {
   font-family: var(--mulish-semibold);
@@ -803,4 +805,87 @@ a {
   border-radius: 50%;
   margin: auto;
   border: 0.3rem solid var(--first-color);
+}
+/* special offer */
+.special-offer {
+  margin-top: 10rem;
+}
+.special-offer__title {
+}
+.special-offer__wrapper {
+  margin-top: 5rem;
+}
+.special-offer__offer {
+  padding: 3rem 2rem;
+}
+.special-offer .col-lg-6:last-child .special-offer__offer,
+.special-offer .col-lg-6:first-child .special-offer__offer {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #f7f6fa;
+  background-position: right;
+}
+.special-offer .col-lg-6:first-child .special-offer__offer {
+  background-image: url(../images/special-offer-1.png);
+}
+.special-offer .col-lg-6:last-child .special-offer__offer {
+  background-image: url(../images/special-offer-2.png);
+}
+.special-offer__offer-name {
+  font-family: var(--mulish-semibold);
+  font-size: 2.2rem;
+  line-height: normal;
+}
+.special-offer__offer-caption {
+  font-family: var(--mulish);
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  max-width: 23rem;
+  margin: 1rem 0 2rem 0;
+}
+.special-offer__price-wrapper {
+  display: flex;
+}
+.special-offer__offer-price {
+  font-size: 1.8rem;
+}
+.special-offer__offer-price-offer {
+  font-size: 1.8rem;
+}
+.special-offer__offer-btn {
+  font-family: var(--mulish-bold);
+  font-size: 1.2rem;
+  color: var(--white);
+  background-color: var(--first-color);
+  width: 9rem;
+  height: 2.5rem;
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+}
+.special-offer__time-container {
+  color: var(--white);
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.timer__background {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--first-color);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.timer__number {
+  font-family: var(--rubik-Medium);
+  font-size: 1.4rem;
+  line-height: normal;
+}
+.timer__unit {
+  font-size: 0.8rem;
 }
