@@ -225,10 +225,10 @@
   .blog__title {
     font-size: 3rem;
   }
-  .footer__list{
+  .footer__list {
     width: auto;
   }
-  .footer__bottom{
+  .footer__bottom {
     flex-direction: column;
     gap: 1.5rem;
     padding-bottom: 1rem;
@@ -291,7 +291,7 @@
   .blog {
     height: 37rem;
   }
-  .footer__logo-box .header__logo-text{
+  .footer__logo-box .header__logo-text {
     display: inline;
   }
 }
