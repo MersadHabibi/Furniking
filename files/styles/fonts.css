@@ -22,3 +22,7 @@
     font-family: 'DM sans';
     src: url(../fonts/DMSans_Regular.ttf) format(truetype);
 }
+@font-face {
+    font-family: 'DM sans Medium';
+    src: url(../fonts/DMSans_Medium.ttf) format(truetype);
+}

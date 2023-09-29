@@ -389,6 +389,7 @@ let productsSectionSlider = new Swiper(".products .mySwiper", {
 });
 // comments section slider
 let commentsSlider = new Swiper(".comments-sec .mySwiper", {
+  spaceBetween: 50,
   navigation: {
     nextEl: ".comments-sec .swiper-button-next",
     prevEl: ".comments-sec .swiper-button-prev",
