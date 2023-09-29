@@ -225,6 +225,14 @@
   .blog__title {
     font-size: 3rem;
   }
+  .footer__list{
+    width: auto;
+  }
+  .footer__bottom{
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+  }
 }
 @media screen and (max-width: 500px) {
   .feature__icon {
@@ -282,6 +290,9 @@
   }
   .blog {
     height: 37rem;
+  }
+  .footer__logo-box .header__logo-text{
+    display: inline;
   }
 }
 @media screen and (max-width: 450px) {
