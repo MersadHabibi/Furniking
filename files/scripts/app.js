@@ -25,13 +25,20 @@ let searchCategory = $.querySelector(".search-bar__categories");
 //trending elements
 let trendingMenuLink = $.querySelectorAll(".trending-sec__menu-item");
 let trendingContent = $.querySelectorAll(".trending-sec__content");
-let trendingProduct = $.querySelectorAll(".trending-sec__product");
 //
 // special offer elements
 let offerDayTime = $.querySelectorAll(".offer-day");
 let offerHourTime = $.querySelectorAll(".offer-hour");
 let offerMinTime = $.querySelectorAll(".offer-minute");
 let offerSecTime = $.querySelectorAll(".offer-second");
+//
+//products section elements
+let productsMenuLink = $.querySelectorAll(".products__menu-link");
+let productsContent = $.querySelectorAll(".product-content");
+
+//
+// product
+let product = $.querySelectorAll(".product");
 //
 let mobileMenuCover = $.querySelector(".cover");
 let menuActive = false;
@@ -46,11 +53,6 @@ if (windowSize <= 1400) {
   popupUl.style.display = "block";
   popupUl.innerHTML = allCollectionMenu.innerHTML;
   allCollectionPopupMenu.append(popupUl);
-}
-//add categories in popup search bar
-function addCategories() {
-  popupSearchBarCategory.innerHTML = searchCategory.innerHTML;
-  popupSearchBarCategory.value = searchCategory.value;
 }
 
 //
@@ -91,10 +93,16 @@ popupSearchBarCloseBtn.addEventListener("click", closeSearchBar);
 trendingMenuLink.forEach((e) => {
   e.addEventListener("click", changeTrendingContent);
 });
-// click on trending product
-trendingProduct.forEach((e) => {
-  e.addEventListener("click", activeTrendingProduct);
+// click on product
+product.forEach((e) => {
+  e.addEventListener("click", activeProduct);
 });
+// change content products section
+productsMenuLink.forEach((e) => {
+  e.addEventListener("click", changeProductsContent);
+});
+
+//
 
 //
 
@@ -102,6 +110,11 @@ trendingProduct.forEach((e) => {
 
 //
 
+//add categories in popup search bar
+function addCategories() {
+  popupSearchBarCategory.innerHTML = searchCategory.innerHTML;
+  popupSearchBarCategory.value = searchCategory.value;
+}
 //open mobile menu
 function openMenu() {
   console.log("open mobile menu");
@@ -144,11 +157,11 @@ function changeTrendingContent() {
   });
 }
 // active trending product on click
-function activeTrendingProduct() {
-  let activeElement = $.querySelector(".trending-sec__product--active");
+function activeProduct() {
+  let activeElement = $.querySelector(".product--active");
   if (activeElement)
-    _addRemoveClass("remove", activeElement, "trending-sec__product--active");
-  _addRemoveClass("add", this, "trending-sec__product--active");
+    _addRemoveClass("remove", activeElement, "product--active");
+  _addRemoveClass("add", this, "product--active");
   console.log("click");
 }
 // special offer timer
@@ -210,7 +223,22 @@ specialOfferTimer(
   offerSecTime[1],
   "3:01:10:00"
 );
-
+// change product content
+function changeProductsContent() {
+  let activeBtn = $.querySelector(".products__menu-item--active");
+  console.log(activeBtn);
+  _addRemoveClass("remove", activeBtn, "products__menu-item--active");
+  _addRemoveClass("add", this, "products__menu-item--active");
+  let datasetValue = this.dataset.content;
+  console.log(this);
+  productsContent.forEach((e) => {
+    if (e.id != datasetValue) {
+      _addRemoveClass("remove", e, "product-content--active");
+    } else {
+      _addRemoveClass("add", e, "product-content--active");
+    }
+  });
+}
 //
 
 // Helper functions
@@ -243,7 +271,7 @@ function _changeDisplay(element, styleValue) {
 //
 
 // header banner slider
-var swiper = new Swiper(".header-content__banner .mySwiper", {
+var headerBannerSlider = new Swiper(".header-content__banner .mySwiper", {
   pagination: {
     el: ".header-content__banner .swiper-pagination",
     clickable: true,
@@ -254,7 +282,7 @@ var swiper = new Swiper(".header-content__banner .mySwiper", {
   },
 });
 // popup search bar slider
-var swiper = new Swiper(".popup-search-bar .mySwiper", {
+var searchBarSlider = new Swiper(".popup-search-bar .mySwiper", {
   direction: "vertical",
   slidesPerView: "auto",
   freeMode: true,
@@ -264,9 +292,57 @@ var swiper = new Swiper(".popup-search-bar .mySwiper", {
   mousewheel: true,
 });
 // trending section slider
-var swiper = new Swiper(".trending-sec__content .mySwiper", {
+var trendingSectionSlider = new Swiper(".trending-sec__content .mySwiper", {
   pagination: {
     el: ".trending-sec .swiper-pagination",
+    clickable: true,
+  },
+  grid: {
+    fill: "row",
+    rows: 2,
+  },
+  breakpoints: {
+    1400: {
+      slidesPerView: 4,
+      spaceBetween: 50,
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 35,
+    },
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 25,
+    },
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 25,
+    },
+    450: {
+      slidesPerView: 2,
+      spaceBetween: 25,
+      grid: {
+        fill: "row",
+        rows: 1,
+      },
+    },
+    0: {
+      slidesPerView: 1,
+      grid: {
+        fill: "row",
+        rows: 1,
+      },
+    },
+  },
+});
+// our products slider
+var productsSectionSlider = new Swiper(".products .mySwiper", {
+  pagination: {
+    el: ".products .swiper-pagination",
     clickable: true,
   },
   grid: {
