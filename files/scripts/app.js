@@ -271,7 +271,7 @@ function _changeDisplay(element, styleValue) {
 //
 
 // header banner slider
-var headerBannerSlider = new Swiper(".header-content__banner .mySwiper", {
+let headerBannerSlider = new Swiper(".header-content__banner .mySwiper", {
   pagination: {
     el: ".header-content__banner .swiper-pagination",
     clickable: true,
@@ -282,7 +282,7 @@ var headerBannerSlider = new Swiper(".header-content__banner .mySwiper", {
   },
 });
 // popup search bar slider
-var searchBarSlider = new Swiper(".popup-search-bar .mySwiper", {
+let searchBarSlider = new Swiper(".popup-search-bar .mySwiper", {
   direction: "vertical",
   slidesPerView: "auto",
   freeMode: true,
@@ -292,7 +292,7 @@ var searchBarSlider = new Swiper(".popup-search-bar .mySwiper", {
   mousewheel: true,
 });
 // trending section slider
-var trendingSectionSlider = new Swiper(".trending-sec__content .mySwiper", {
+let trendingSectionSlider = new Swiper(".trending-sec__content .mySwiper", {
   pagination: {
     el: ".trending-sec .swiper-pagination",
     clickable: true,
@@ -340,7 +340,7 @@ var trendingSectionSlider = new Swiper(".trending-sec__content .mySwiper", {
   },
 });
 // our products slider
-var productsSectionSlider = new Swiper(".products .mySwiper", {
+let productsSectionSlider = new Swiper(".products .mySwiper", {
   pagination: {
     el: ".products .swiper-pagination",
     clickable: true,
@@ -385,5 +385,16 @@ var productsSectionSlider = new Swiper(".products .mySwiper", {
         rows: 1,
       },
     },
+  },
+});
+// comments section slider
+let commentsSlider = new Swiper(".comments-sec .mySwiper", {
+  navigation: {
+    nextEl: ".comments-sec .swiper-button-next",
+    prevEl: ".comments-sec .swiper-button-prev",
+  },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
   },
 });

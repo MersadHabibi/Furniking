@@ -18,3 +18,7 @@
     font-family: 'Mulish Bold';
     src: url(../fonts/Mulish-Bold.ttf) format(truetype);
 }
+@font-face {
+    font-family: 'DM sans';
+    src: url(../fonts/DMSans_Regular.ttf) format(truetype);
+}

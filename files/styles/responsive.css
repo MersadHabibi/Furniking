@@ -109,6 +109,9 @@
     filter: brightness(1.01);
     background-position: right bottom;
   }
+  .comments-sec__content{
+    margin: 5rem 0 0 0
+  }
 }
 @media screen and (max-width: 768px) {
   .search-bar {
@@ -161,6 +164,10 @@
     width: 100%;
     flex-wrap: wrap;
   }
+  .comments-sec .swiper-button-next,
+  .comments-sec .swiper-button-prev {
+    display: none;
+  }
 }
 @media screen and (max-width: 576px) {
   .section-titles {
@@ -187,6 +194,16 @@
     justify-content: space-around;
     width: 100%;
     flex-wrap: wrap;
+  }
+  .comments-sec__title{
+    font-size: 2.6rem;
+  }
+  .comment__content{
+    overflow: hidden;
+    display: -webkit-box;
+    line-clamp: 4;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
   }
 }
 @media screen and (max-width: 500px) {
