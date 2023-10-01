@@ -87,7 +87,7 @@ allCollectionMenuBtn.addEventListener("click", () => {
 // open popup search bar
 searchBtn.addEventListener("click", openSearchBar);
 searchInput.addEventListener("click", openSearchBar);
-// open popup search bar
+// close popup search bar
 popupSearchBarCloseBtn.addEventListener("click", closeSearchBar);
 // change content trending section
 trendingMenuLink.forEach((e) => {
