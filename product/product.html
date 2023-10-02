@@ -6,6 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="../files/styles/header.css" />
     <link rel="stylesheet" href="../files/product/product.css" />
+    <link rel="stylesheet" href="../files/product/product-responsive.css" />
+    <link rel="stylesheet" href="../files/styles/swiper-bundle.min.css" />
   </head>
   <body>
     <header class="header">
@@ -95,8 +97,8 @@
             </div>
             <div class="header-top__btns">
               <a href="#" class="header-top__btn"
-                ><ion-icon name="cart-outline"></ion-icon
-              ></a>
+                ><ion-icon name="bag-outline"></ion-icon>
+              </a>
               <a href="#" class="header-top__btn"
                 ><ion-icon name="notifications-outline"></ion-icon
               ></a>
@@ -212,6 +214,114 @@
         </div>
       </nav>
     </header>
+    <main class="main">
+      <div class="container">
+        <div class="product">
+          <div class="row">
+            <div class="col-12 col-lg-5 col-xl-5 col-xxl-4">
+              <div class="product__images">
+                <div class="big-image">
+                  <img
+                    src="../files/images/trending-1.jpg"
+                    alt=""
+                    class="big-image__img"
+                  />
+                </div>
+                <div class="images__wrapper">
+                  <div class="image__container">
+                    <img
+                      src="../files/images/trending-1.jpg"
+                      alt=""
+                      class="image"
+                    />
+                  </div>
+                  <div class="image__container">
+                    <img
+                      src="../files/images/trending-8.jpg"
+                      alt=""
+                      class="image"
+                    />
+                  </div>
+                  <div class="image__container">
+                    <img
+                      src="../files/images/trending-1.jpg"
+                      alt=""
+                      class="image"
+                    />
+                  </div>
+                  <div class="image__container">
+                    <img
+                      src="../files/images/trending-8.jpg"
+                      alt=""
+                      class="image"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-7 col-xl-7 col-xxl-8">
+              <div class="product__content">
+                <div class="product__btns-container">
+                  <div class="product__btn">
+                    <ion-icon name="heart"></ion-icon>
+                    <span>123 Like</span>
+                  </div>
+                  <div class="product__btn">
+                    <ion-icon name="chatbubble"></ion-icon>
+                    <span>10 comment</span>
+                  </div>
+                  <div class="product__btn">
+                    <ion-icon name="bookmark"></ion-icon>
+                    <span>123 save</span>
+                  </div>
+                </div>
+                <h1 class="product__name">Living Room Furniture</h1>
+                <h3 class="product__info-title">Property:</h3>
+                <ul class="product__info-list">
+                  <li class="product__info-item">width: <span>150cm</span></li>
+                  <li class="product__info-item">Height: <span>200cm</span></li>
+                  <li class="product__info-item">
+                    material: <span>Wood</span>
+                  </li>
+                </ul>
+                <h3 class="product__color-title">Color:</h3>
+                <ul class="product__color-list">
+                  <li class="product__color-item"></li>
+                  <li class="product__color-item"></li>
+                  <li
+                    class="product__color-item product__color-item--select"
+                  ></li>
+                  <li class="product__color-item"></li>
+                </ul>
+                <div class="product__prices">
+                  <span class="product__price">$200</span>
+                  <del class="product__price-offer">$300</del>
+                </div>
+                <div class="product__buys-btn">
+                  <button class="product__buy">Add to Cart</button>
+                  <div class="product__number-box">
+                    <div class="product__decrease">
+                      <div class="line"></div>
+                    </div>
+                    <div class="product__number">0</div>
+                    <div class="product__increase">
+                      <div class="line"></div>
+                    </div>
+                  </div>
+                </div>
+                <p class="product__caption">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse
+                  dolorem ipsa voluptatem? Eveniet, veritatis accusantium.
+                  Itaque atque laboriosam odit at cum, nisi nihil minus, omnis,
+                  iusto sed quisquam explicabo impedit. Ipsum optio obcaecati
+                  corrupti suscipit cumque? Quae quisquam doloremque ducimus?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <footer class="footer">
       <div class="footer__line"></div>
       <div class="container">
@@ -679,6 +789,7 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script src="../files/scripts/swiper-bundle.min.js"></script>
     <script src="../files/product/product.js"></script>
   </body>
 </html>

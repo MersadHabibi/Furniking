@@ -107,16 +107,33 @@ function closeSearchBar() {
 
 // add class function
 function _addRemoveClass(action, element, classes) {
-    if (action == "add") {
-      element.classList.add(`${classes}`);
-    } else if (action == "remove") {
-      element.classList.remove(`${classes}`);
-    } else if (action == "toggle") {
-      element.classList.toggle(`${classes}`);
-    } else {
-      console.log(
-        "action not true",
-        ` element:${element} classes:${classes} action:${action}`
-      );
-    }
+  if (action == "add") {
+    element.classList.add(`${classes}`);
+  } else if (action == "remove") {
+    element.classList.remove(`${classes}`);
+  } else if (action == "toggle") {
+    element.classList.toggle(`${classes}`);
+  } else {
+    console.log(
+      "action not true",
+      ` element:${element} classes:${classes} action:${action}`
+    );
   }
+}
+
+//
+
+// slider
+
+//
+
+// popup search bar slider
+let searchBarSlider = new Swiper(".popup-search-bar .mySwiper", {
+  direction: "vertical",
+  slidesPerView: "auto",
+  freeMode: true,
+  scrollbar: {
+    el: ".popup-search-bar .swiper-scrollbar",
+  },
+  mousewheel: true,
+});
