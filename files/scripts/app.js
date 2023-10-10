@@ -40,11 +40,14 @@ let productsContent = $.querySelectorAll(".product-content");
 // product
 let product = $.querySelectorAll(".product");
 //
+// header top
+let headerTopElem = $.querySelector(".header-top");
+let headerTopElemTopDistance = headerTopElem.offsetTop;
+//
 let mobileMenuCover = $.querySelector(".cover");
 let menuActive = false;
 let searchBarActive = false;
 let windowSize = window.innerWidth;
-let specialOfferInterval;
 
 // create menu popup
 if (windowSize <= 1400) {
@@ -63,6 +66,12 @@ if (windowSize <= 1400) {
 
 // lock scroll when mobile menu is open
 window.addEventListener("scroll", (e) => {
+  // sticky header top
+  if (window.scrollY > headerTopElemTopDistance) {
+    setSticky();
+  } else {
+    unsetSticky();
+  }
   if ((menuActive == false && searchBarActive == false) || windowSize >= 992) {
     return;
   } else if (menuActive == true || searchBarActive == true) {
@@ -137,10 +146,14 @@ function openSearchBar() {
   _addRemoveClass("add", popupSearchBar, "popup-search-bar--open");
   addCategories();
   popupSearchBarInput.focus();
+  unsetSticky();
 }
 //close popup search bar
 function closeSearchBar() {
   _addRemoveClass("remove", popupSearchBar, "popup-search-bar--open");
+  if (window.scrollY > headerTopElemTopDistance) {
+    setSticky();
+  }
 }
 // change trending content
 function changeTrendingContent() {
@@ -239,6 +252,16 @@ function changeProductsContent() {
     }
   });
 }
+// sticky header top
+function setSticky() {
+  _addRemoveClass("add", headerTopElem, "header-top--sticky");
+  document.body.style.paddingTop = headerTopElem.offsetHeight + "px";
+}
+function unsetSticky() {
+  _addRemoveClass("remove", headerTopElem, "header-top--sticky");
+  document.body.style.paddingTop = 0;
+}
+
 //
 
 // Helper functions

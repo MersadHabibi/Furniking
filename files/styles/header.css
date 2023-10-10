@@ -256,9 +256,17 @@ a {
 }
 
 /* header top */
-
 .header-top {
-  margin: 2rem 0;
+  padding: 2rem 0;
+}
+.header-top--sticky{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background-color: var(--white);
+  box-shadow: .2rem .2rem 1.5rem rgba(0, 0, 0, 0.08);
 }
 .header-top__wrapper {
   display: flex;
@@ -304,6 +312,7 @@ a {
   outline: none;
   padding-left: 1rem;
   color: inherit;
+  background-color: transparent !important;
 }
 .search-bar__btn {
   height: 100%;

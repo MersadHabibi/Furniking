@@ -21,6 +21,16 @@ let popupSearchBarCategory = $.querySelector(
 let searchBtn = $.querySelector(".search-bar__btn");
 let searchInput = $.querySelector(".search-bar__input");
 let searchCategory = $.querySelector(".search-bar__categories");
+// image element
+let bigImageElem = $.querySelector(".big-image img");
+let imagesBtnElem = $.querySelectorAll(".image__container img");
+
+// color btns elements
+let colorItemsElem = $.querySelectorAll(".product__color-item");
+// buy btns elements
+let buyBtnElem = $.querySelector(".product__buy");
+let buyNumberElem = $.querySelector(".product__number-box");
+let bought = false;
 
 let menuActive = false;
 let searchBarActive = false;
@@ -59,6 +69,21 @@ searchBtn.addEventListener("click", openSearchBar);
 searchInput.addEventListener("click", openSearchBar);
 // close popup search bar
 popupSearchBarCloseBtn.addEventListener("click", closeSearchBar);
+// buy btn
+buyBtnElem.addEventListener("click", () => {
+  if (bought == false) {
+    bought = true;
+    checkBought(bought);
+  }
+});
+// color event
+colorItemsElem.forEach((e) => {
+  e.addEventListener("click", colorSelect);
+});
+// images event
+imagesBtnElem.forEach((e) => {
+  e.addEventListener("click", changeImage);
+});
 
 //
 
@@ -98,7 +123,23 @@ function openSearchBar() {
 function closeSearchBar() {
   _addRemoveClass("remove", popupSearchBar, "popup-search-bar--open");
 }
-
+// check bought
+function checkBought(bought) {
+  if (bought) {
+    _addRemoveClass("add", buyBtnElem, "product__buy--bought");
+    _addRemoveClass("add", buyNumberElem, "product__number-box--active");
+  }
+}
+// select color
+function colorSelect() {
+  let selected = $.querySelector(".product__color-item--select");
+  _addRemoveClass("remove", selected, "product__color-item--select");
+  _addRemoveClass("add", this, "product__color-item--select");
+}
+// change Image
+function changeImage() {
+  bigImageElem.src = this.src;
+}
 //
 
 // Helper functions
